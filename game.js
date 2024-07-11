@@ -4,7 +4,7 @@ const terminal = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-function newQuestion(query) {
+function userInput(query){
     return new Promise(answer => terminal.question(query, answer));  
 }
 
@@ -34,7 +34,7 @@ function drawBoard(boardState){
 
 async function turnPlayer(boardState){
     while (true){
-        let n = await newQuestion("\nPlace x at: ");
+        let n = await userInput("\nPlace x at: ");
         if (boardState[n] === " "){
             boardState[n] = 'x';
             return boardState;
