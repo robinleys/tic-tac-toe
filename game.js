@@ -8,7 +8,7 @@ function userInput(query){
     return new Promise(answer => terminal.question(query, answer));  
 }
 
-boardState = Array(9).fill(" ")
+let boardState = Array(9).fill(" ")
 
 async function game(){
     while (true){
@@ -23,13 +23,13 @@ async function game(){
 }
 
 function drawBoard(boardState){
-    console.log(``)
+    console.log(` `)
     console.log(` ${boardState[0]} | ${boardState[1]} | ${boardState[2]} `)
     console.log(`---|---|---`)
     console.log(` ${boardState[3]} | ${boardState[4]} | ${boardState[5]} `)
     console.log(`---|---|---`)
     console.log(` ${boardState[6]} | ${boardState[7]} | ${boardState[8]} `)
-    console.log(``)
+    console.log(` `)
 }
 
 async function turnPlayer(boardState){
