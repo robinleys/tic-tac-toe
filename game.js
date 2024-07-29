@@ -1,7 +1,5 @@
 const input = require('prompt-sync')();
 
-
-
 let boardState = Array(9).fill(" ")
 
 function game(){
